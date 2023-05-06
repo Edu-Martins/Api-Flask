@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Task Search</title>
+  </head>
+  <body>
+    <h1>Task Search</h1>
+    <form action="/task/search" method="post">
+      
+      <label for="search">search:</label>
+      <input type="text" id="search" name="search"><br><br>
+
+      <input type="submit" value="search">
+    </form>
+
+    {% if error %}
+    <div class="alert alert-error" role="alert">
+      <br>
+        Não foi encontrada a lista !
+    </div>
+    {% endif %}
+
+  </body>
+</html>

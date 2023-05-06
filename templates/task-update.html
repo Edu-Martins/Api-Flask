@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Task Update</title>
+  </head>
+  <body>
+    <h1>Task Update</h1>
+    <form action="/task/update" method="put">
+      <label for="id">Id:</label>
+      <input type="id" id="id" name="id"><br><br>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+      <input type="submit" value=" Task Update">
+    </form>
+
+    {% if success %}
+    <div class="alert alert-success" role="alert">
+      <br>
+       Task updated successfully!
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <div class="alert alert-error" role="alert">
+      <br>
+        Task não atualizada!
+    </div>
+    {% endif %}
+
+  </body>
+</html>

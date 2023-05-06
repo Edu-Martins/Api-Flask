@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+  </head>
+  <body>
+    <h1>LOGIN</h1>
+    <form action="/user/login" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Login">
+    </form>
+
+    {% if success %}
+    <div class="alert alert-success" role="alert">
+      <br>
+        Logged successfully!
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <div class="alert alert-error" role="alert">
+      <br>
+        Deu ruim
+    </div>
+    {% endif %}
+
+  </body>
+</html>

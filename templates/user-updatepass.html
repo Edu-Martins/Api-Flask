@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Update User</title>
+  </head>
+  <body>
+    <h1> User UpdatePass</h1>
+    <form action="/user/updatepass" method="put">
+      <label for="username">Username:</label>
+      <input type="username" id="username" name="username"><br><br>
+
+      <label for="password">password:</label>
+      <input type="text" id="password" name="password"><br><br>
+
+      <label for="new_password">new_password:</label>
+      <input type="text" id="new_password" name="new_password"><br><br>
+
+      <label for="new_username">new_username:</label>
+      <input type="text" id="new_username" name="new_username"><br><br>
+
+
+      <input type="submit" value="Update User">
+    </form>
+
+    {% if success %}
+    <div class="alert alert-success" role="alert">
+      <br>
+        User updated successfully!
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <div class="alert alert-error" role="alert">
+      <br>
+        Foi de F
+    </div>
+    {% endif %}
+
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create a New User</title>
+  </head>
+  <body>
+    <h1>Create a New User</h1>
+    <form action="/user/new" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+
+      <input type="submit" value="Create User">
+    </form>
+
+    {% if success %}
+    <div class="alert alert-success" role="alert">
+      <br>
+        User created successfully!
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <div class="alert alert-error" role="alert">
+      <br>
+        Foi de F
+    </div>
+    {% endif %}
+
+  </body>
+</html>
